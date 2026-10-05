@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0;url=index.html">
+  <title>Administrator Portal — Velorian Bank</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/preloader.css">
+</head>
+<body class="auth-body">
+  <div id="vb-preloader" aria-label="Loading Velorian Bank administrator portal" role="status">
+    <div class="vb-loader-shell">
+      <div class="vb-loader-mark"><span class="vb-loader-ring"></span><img class="vb-loader-logo" src="../assets/logo-transparent.png" alt="Velorian Bank"></div>
+      <p class="vb-loader-name">Velorian Bank</p>
+      <p class="vb-loader-status">Opening administrator control center</p>
+      <div class="vb-loader-progress" aria-hidden="true"></div>
+    </div>
+  </div>
+  <main class="auth-layout">
+    <section class="auth-card glass" style="margin:auto;text-align:center;max-width:560px">
+      <span class="eyebrow">RESTRICTED ACCESS</span>
+      <h1>Administrator Portal</h1>
+      <p>Redirecting to the protected Velorian Bank Control Center…</p>
+      <a class="primary-btn" href="index.html">Continue to Administrator Portal →</a>
+    </section>
+  </main>
+  <script src="../js/storage.js"></script>
+  <script>
+    const s = vbGetSession();
+    if (!s || s.role !== 'admin') location.replace('login.html');
+    else setTimeout(() => location.replace('index.html'), 250);
+  </script>
+  <script src="../js/preloader.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Velorian Bank — secure digital banking for clients.">
+  <title>Velorian Bank — Banking Beyond Boundaries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(4,12,21,.78);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .nav-wrap{width:min(1240px,92%);height:76px;margin:auto;display:flex;align-items:center;gap:34px}.site-logo{width:190px;height:52px;object-fit:contain;mix-blend-mode:screen;flex:0 0 auto}.site-nav{display:flex;align-items:center;gap:25px;margin-left:auto}.site-nav a,.nav-button{font-size:12px;color:#bdc8d4;background:none;border:0;padding:9px 0;cursor:pointer}.site-nav a:hover,.nav-button:hover{color:#f1d78c}.nav-login{padding:11px 18px!important;border:1px solid rgba(213,169,79,.6)!important;border-radius:10px;color:#f5d98c!important}.menu-btn{display:none;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:white;border-radius:10px;padding:9px 11px}
+    .hero2{min-height:790px;padding-top:76px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(2,9,16,.92) 0%,rgba(3,13,23,.72) 43%,rgba(3,10,18,.52) 100%),url('assets/backgrounds/homepage-bg.jpg') center/cover no-repeat}.hero2:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--bg));pointer-events:none}.hero-inner{width:min(1240px,92%);margin:auto;display:grid;grid-template-columns:1fr .85fr;gap:70px;align-items:center;position:relative;z-index:2}.hero-copy{padding:55px 0}.hero-copy .eyebrow{color:#e0bb67}.hero-copy h1{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:clamp(52px,6.2vw,88px);line-height:.99;letter-spacing:-.04em;max-width:760px;margin:16px 0}.hero-copy h1 span{color:#e8c66e}.hero-copy p{font-size:17px;max-width:600px;color:#c5d0db;line-height:1.75}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 21px;border-radius:10px;font-weight:800;font-size:12px;border:1px solid rgba(255,255,255,.13)}.hero-btn.primary{background:linear-gradient(135deg,#d4a544,#f0cf78);color:#101a25}.hero-btn.secondary{background:rgba(4,15,25,.5);color:white}.hero-side{display:grid;gap:16px}.portal-card2{min-height:180px;padding:28px;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:linear-gradient(145deg,rgba(14,30,47,.78),rgba(3,13,22,.68));backdrop-filter:blur(16px);box-shadow:0 28px 70px rgba(0,0,0,.32);transition:.25s}.portal-card2:hover{transform:translateY(-5px);border-color:rgba(225,190,100,.45)}.portal-card2 .top{display:flex;justify-content:space-between;align-items:center}.portal-card2 h2{font-size:26px;margin:9px 0 6px}.portal-card2 p{font-size:12px;margin:0}.portal-card2 .icon{width:45px;height:45px;border-radius:14px;display:grid;place-items:center;background:rgba(213,169,79,.12);color:#efc96e}.portal-card2.client .icon{background:rgba(49,213,155,.1);color:#31d59b}.portal-card2 .arrow{font-size:22px;color:#8fa0b1}.stat-bar{width:min(1240px,92%);margin:-48px auto 0;position:relative;z-index:4;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(5,18,30,.92);border:1px solid rgba(255,255,255,.11);border-radius:22px;backdrop-filter:blur(20px);box-shadow:0 25px 70px rgba(0,0,0,.35);overflow:hidden}.stat{padding:25px 28px;border-right:1px solid rgba(255,255,255,.07)}.stat:last-child{border-right:0}.stat strong{display:block;font-size:25px;color:#f1d78c}.stat span{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#8294a7}.section{width:min(1240px,92%);margin:0 auto;padding:110px 0}.section-head{max-width:700px;margin-bottom:42px}.section-head .eyebrow{color:#d7b461}.section-head h2{font-size:clamp(32px,4vw,52px);line-height:1.08;margin:10px 0}.section-head p{font-size:15px}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service-card{padding:28px;min-height:210px;border-radius:22px}.service-card .svc-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(213,169,79,.1);color:#e3bc61;font-size:20px;margin-bottom:22px}.service-card h3{font-size:19px}.service-card p{font-size:12px;margin-bottom:0}.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-image{min-height:470px;border-radius:28px;background:linear-gradient(90deg,rgba(2,11,19,.22),rgba(2,11,19,.1)),url('assets/backgrounds/homepage-bg.jpg') center/cover;box-shadow:var(--shadow);border:1px solid var(--border);position:relative;overflow:hidden}.about-badge{position:absolute;left:24px;bottom:24px;padding:20px 22px;border-radius:18px;background:rgba(4,15,25,.82);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1)}.about-badge strong{font-size:29px;color:#e8c66e;display:block}.about-badge span{font-size:10px;color:#a7b5c4;text-transform:uppercase;letter-spacing:.12em}.about-copy p{font-size:14px}.about-list{display:grid;gap:12px;margin-top:25px}.about-list div{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07)}.check{color:#e1bd68}.cta{padding:55px;border-radius:28px;background:linear-gradient(110deg,rgba(15,39,60,.95),rgba(11,23,37,.9));border:1px solid rgba(213,169,79,.18);display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:38px}.cta p{margin:8px 0 0;max-width:650px}.security-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.security-card{padding:24px;border-radius:20px}.security-card strong{display:block;font-size:13px}.security-card span{display:block;color:#7f92a7;font-size:11px;line-height:1.6;margin-top:7px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{padding:30px;border-radius:22px}.socials{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}.social{padding:14px;border-radius:13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}.social strong{display:block;font-size:12px}.social span{color:#8497aa;font-size:10px}.site-footer{border-top:1px solid rgba(255,255,255,.07);padding:50px 0 30px}.footer-inner{width:min(1240px,92%);margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-logo{width:170px;mix-blend-mode:screen}.footer-copy{max-width:420px;color:#75899e;font-size:11px;line-height:1.7}.footer-bottom{width:min(1240px,92%);margin:30px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;color:#607488;font-size:9px}.modal-backdrop2{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.65);display:none;place-items:center;padding:20px}.modal-backdrop2.open{display:grid}.site-modal{width:min(680px,100%);max-height:85vh;overflow:auto;padding:34px;border-radius:24px;background:#0a1928;border:1px solid rgba(255,255,255,.12);box-shadow:0 40px 100px rgba(0,0,0,.5);position:relative}.site-modal h2{font-size:30px}.close-modal{position:absolute;right:18px;top:18px;border:0;background:rgba(255,255,255,.06);color:white;width:34px;height:34px;border-radius:10px}.modal-stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:25px 0}.modal-stat{padding:17px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}.modal-stat strong{display:block;color:#e9c66f;font-size:20px}.modal-stat span{font-size:9px;color:#7e91a4;text-transform:uppercase;letter-spacing:.08em}.mobile-only{display:none}
+
+    .client-only-portal{max-width:620px;width:100%;margin-left:auto}.client-only-portal .portal-card2{min-height:225px}.client-access-note{display:flex;align-items:center;gap:9px;margin:12px 4px 0;color:#91a1b1;font-size:10px;text-transform:uppercase;letter-spacing:.13em}.note-dot{color:#31d59b;font-size:8px}
+    @media(max-width:900px){.site-nav{display:none}.menu-btn{display:block;margin-left:auto}.nav-wrap{height:68px}.site-logo{width:165px}.hero2{min-height:900px}.hero-inner{grid-template-columns:1fr;gap:30px}.hero-copy{padding-top:75px}.hero-side{grid-template-columns:1fr 1fr}.stat-bar{grid-template-columns:repeat(2,1fr);margin-top:-20px}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.07)}.service-grid,.security-grid{grid-template-columns:1fr 1fr}.about-wrap,.contact-grid{grid-template-columns:1fr}.about-image{min-height:360px}}
+    @media(max-width:600px){.nav-wrap{width:94%}.site-logo{width:145px}.hero-copy h1{font-size:50px}.hero-copy p{font-size:14px}.hero-side{grid-template-columns:1fr}.stat-bar{grid-template-columns:1fr 1fr;width:94%}.stat{padding:18px 15px}.stat strong{font-size:19px}.section{padding:75px 0}.service-grid,.security-grid{grid-template-columns:1fr}.cta{padding:30px;display:block}.cta h2{font-size:29px}.cta .hero-btn{margin-top:20px}.footer-bottom{display:block;line-height:2}.modal-stat-grid{grid-template-columns:1fr}.socials{grid-template-columns:1fr}.mobile-nav.open{display:grid}.mobile-nav{display:none;position:absolute;top:68px;left:3%;right:3%;padding:16px;border-radius:16px;background:rgba(5,15,25,.97);border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 60px rgba(0,0,0,.4)}.mobile-nav a,.mobile-nav button{padding:13px;border:0;background:none;color:#d4deea;text-align:left}.mobile-only{display:block}}
+  </style>
+
+  <style id="landing-fix">
+    /* SELF-CONTAINED HOMEPAGE FIX: keeps the landing page styled even if an extracted
+       folder is opened before external CSS finishes loading. */
+    :root{--bg:#07101c;--text:#f5f8fc;--muted:#91a2b6;--gold:#d5a94f;--gold-soft:#f1d78c;--border:rgba(255,255,255,.09);--shadow:0 24px 70px rgba(0,0,0,.32)}
+    html{scroll-behavior:smooth}
+    *{box-sizing:border-box}
+    body.landing-body{margin:0;min-height:100vh;overflow-x:hidden;background:#07101c;color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body.landing-body a{color:inherit;text-decoration:none}
+    body.landing-body button{font:inherit;cursor:pointer}
+    .site-header{position:fixed!important;top:0;left:0;right:0;z-index:100;background:rgba(4,12,21,.84)!important;border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .nav-wrap{width:min(1240px,92%);height:76px;margin:auto;display:flex;align-items:center;gap:34px}
+    .site-logo{width:180px;height:52px;object-fit:contain;object-position:left center;flex:0 0 auto;display:block}
+    .site-nav{display:flex!important;align-items:center;gap:26px;margin-left:auto}
+    .site-nav a,.nav-button{font-family:Inter,system-ui,sans-serif!important;font-size:12px!important;color:#bdc8d4!important;background:transparent!important;border:0!important;padding:9px 0!important;cursor:pointer}
+    .site-nav a:hover,.nav-button:hover{color:#f1d78c!important}
+    .nav-login{padding:11px 18px!important;border:1px solid rgba(213,169,79,.65)!important;border-radius:10px;color:#f5d98c!important}
+    .nav-open-account{padding:11px 18px!important;border-radius:10px;background:linear-gradient(135deg,#d4a544,#f0cf78)!important;color:#101a25!important;font-weight:800!important}
+    .nav-open-account:hover{color:#101a25!important;filter:brightness(1.06)}
+    .mobile-open-account{border:1px solid rgba(213,169,79,.55)!important;border-radius:10px;background:rgba(213,169,79,.08)!important;color:#f1d78c!important;font-weight:800}
+
+    .menu-btn{display:none;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:white;border-radius:10px;padding:9px 11px}
+    .mobile-nav{display:none!important;position:absolute;top:76px;left:4%;right:4%;padding:16px;border-radius:16px;background:rgba(5,15,25,.98);border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 60px rgba(0,0,0,.45)}
+    .mobile-nav.open{display:grid!important}
+    .mobile-nav a,.mobile-nav button{padding:13px;border:0;background:none;color:#d4deea;text-align:left}
+    .hero2{min-height:790px;padding-top:76px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(2,9,16,.93) 0%,rgba(3,13,23,.76) 43%,rgba(3,10,18,.58) 100%),url('assets/backgrounds/homepage-bg.jpg') center/cover no-repeat}
+    .hero2:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,#07101c);pointer-events:none}
+    .hero-inner{width:min(1240px,92%);margin:auto;display:grid;grid-template-columns:1fr .85fr;gap:70px;align-items:center;position:relative;z-index:2}
+    .hero-copy{padding:55px 0}.hero-copy .eyebrow{color:#e0bb67}.eyebrow{display:block;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    .hero-copy h1{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:clamp(52px,6.2vw,88px);line-height:.99;letter-spacing:-.04em;max-width:760px;margin:16px 0}.hero-copy h1 span{color:#e8c66e}
+    .hero-copy p{font-size:17px;max-width:600px;color:#c5d0db;line-height:1.75}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .hero-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 21px;border-radius:10px;font-weight:800;font-size:12px;border:1px solid rgba(255,255,255,.13)}
+    .hero-btn.primary{background:linear-gradient(135deg,#d4a544,#f0cf78);color:#101a25}.hero-btn.secondary{background:rgba(4,15,25,.5);color:white}
+    .hero-side{display:grid;gap:16px}.portal-card2{min-height:180px;padding:28px;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:linear-gradient(145deg,rgba(14,30,47,.78),rgba(3,13,22,.68));backdrop-filter:blur(16px);box-shadow:0 28px 70px rgba(0,0,0,.32);transition:.25s}
+    .portal-card2:hover{transform:translateY(-5px);border-color:rgba(225,190,100,.45)}.portal-card2 .top{display:flex;justify-content:space-between;align-items:center}.portal-card2 h2{font-family:Inter,system-ui,sans-serif;font-size:26px;margin:9px 0 6px}.portal-card2 p{font-size:12px;margin:0;color:#91a2b6}.portal-card2 .icon{width:45px;height:45px;border-radius:14px;display:grid;place-items:center;background:rgba(213,169,79,.12);color:#efc96e}.portal-card2.client .icon{background:rgba(49,213,155,.1);color:#31d59b}.portal-card2 .arrow{font-size:22px;color:#8fa0b1}
+    .stat-bar{width:min(1240px,92%);margin:-48px auto 0;position:relative;z-index:4;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(5,18,30,.94);border:1px solid rgba(255,255,255,.11);border-radius:22px;backdrop-filter:blur(20px);box-shadow:0 25px 70px rgba(0,0,0,.35);overflow:hidden}.stat{padding:25px 28px;border-right:1px solid rgba(255,255,255,.07)}.stat:last-child{border-right:0}.stat strong{display:block;font-size:25px;color:#f1d78c}.stat span{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#8294a7}
+    .section{width:min(1240px,92%);margin:0 auto;padding:110px 0}.section-head{max-width:700px;margin-bottom:42px}.section-head .eyebrow{color:#d7b461}.section-head h2{font-family:Inter,system-ui,sans-serif;font-size:clamp(32px,4vw,52px);line-height:1.08;margin:10px 0}.section-head p{font-size:15px}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service-card{padding:28px;min-height:210px;border-radius:22px}.service-card .svc-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(213,169,79,.1);color:#e3bc61;font-size:20px;margin-bottom:22px}.service-card h3{font-size:19px}.service-card p{font-size:12px;margin-bottom:0}
+    .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-image{min-height:470px;border-radius:28px;background:linear-gradient(90deg,rgba(2,11,19,.22),rgba(2,11,19,.1)),url('assets/backgrounds/homepage-bg.jpg') center/cover;box-shadow:var(--shadow);border:1px solid var(--border);position:relative;overflow:hidden}.about-badge{position:absolute;left:24px;bottom:24px;padding:20px 22px;border-radius:18px;background:rgba(4,15,25,.82);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1)}.about-badge strong{font-size:29px;color:#e8c66e;display:block}.about-badge span{font-size:10px;color:#a7b5c4;text-transform:uppercase;letter-spacing:.12em}.about-copy p{font-size:14px}.about-list{display:grid;gap:12px;margin-top:25px}.about-list div{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07)}.check{color:#e1bd68}
+    .cta{padding:55px;border-radius:28px;background:linear-gradient(110deg,rgba(15,39,60,.95),rgba(11,23,37,.9));border:1px solid rgba(213,169,79,.18);display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:38px}.cta p{margin:8px 0 0;max-width:650px}.security-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.security-card{padding:24px;border-radius:20px}.security-card strong{display:block;font-size:13px}.security-card span{display:block;color:#7f92a7;font-size:11px;line-height:1.6;margin-top:7px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{padding:30px;border-radius:22px}.socials{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}.social{padding:14px;border-radius:13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}.social strong{display:block;font-size:12px}.social span{color:#8497aa;font-size:10px}
+    .site-footer{border-top:1px solid rgba(255,255,255,.07);padding:50px 0 30px}.footer-inner{width:min(1240px,92%);margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-logo{width:170px}.footer-copy{max-width:420px;color:#75899e;font-size:11px;line-height:1.7}.footer-bottom{width:min(1240px,92%);margin:30px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;color:#607488;font-size:9px}
+    .modal-backdrop2{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.65);display:none;place-items:center;padding:20px}.modal-backdrop2.open{display:grid}.site-modal{width:min(680px,100%);max-height:85vh;overflow:auto;padding:34px;border-radius:24px;background:#0a1928;border:1px solid rgba(255,255,255,.12);box-shadow:0 40px 100px rgba(0,0,0,.5);position:relative}.site-modal h2{font-size:30px}.close-modal{position:absolute;right:18px;top:18px;border:0;background:rgba(255,255,255,.06);color:white;width:34px;height:34px;border-radius:10px}.modal-stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:25px 0}.modal-stat{padding:17px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}.modal-stat strong{display:block;color:#e9c66f;font-size:20px}.modal-stat span{font-size:9px;color:#7e91a4;text-transform:uppercase;letter-spacing:.08em}
+    @media(max-width:900px){.site-nav{display:none!important}.menu-btn{display:block;margin-left:auto}.nav-wrap{height:68px}.mobile-nav{top:68px}.hero2{min-height:900px}.hero-inner{grid-template-columns:1fr;gap:30px}.hero-copy{padding-top:75px}.hero-side{grid-template-columns:1fr 1fr}.stat-bar{grid-template-columns:repeat(2,1fr);margin-top:-20px}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.07)}.service-grid,.security-grid{grid-template-columns:1fr 1fr}.about-wrap,.contact-grid{grid-template-columns:1fr}.about-image{min-height:360px}}
+    @media(max-width:600px){.nav-wrap{width:94%}.site-logo{width:150px}.hero-copy h1{font-size:50px}.hero-copy p{font-size:14px}.hero-side{grid-template-columns:1fr}.stat-bar{grid-template-columns:1fr 1fr;width:94%}.stat{padding:18px 15px}.stat strong{font-size:19px}.section{padding:75px 0}.service-grid,.security-grid{grid-template-columns:1fr}.cta{padding:30px;display:block}.cta h2{font-size:29px}.cta .hero-btn{margin-top:20px}.footer-bottom{display:block;line-height:2}.modal-stat-grid{grid-template-columns:1fr}.socials{grid-template-columns:1fr}}
+  </style>
+
+
+  <link rel="stylesheet" href="css/preloader.css">
+</head>
+<body class="landing-body">
+  <div id="vb-preloader" aria-label="Loading Velorian Bank" role="status">
+    <div class="vb-loader-shell">
+      <div class="vb-loader-mark">
+        <span class="vb-loader-ring"></span>
+        <img class="vb-loader-logo" src="assets/logo-transparent.png" alt="Velorian Bank">
+      </div>
+      <p class="vb-loader-name">Velorian Bank</p>
+      <p class="vb-loader-status">Securing your banking experience</p>
+      <div class="vb-loader-progress" aria-hidden="true"></div>
+    </div>
+  </div>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html"><img src="assets/logo-transparent.png" class="site-logo" alt="Velorian Bank"></a>
+    <nav class="site-nav">
+      <a href="#home">Home</a><a href="#services">Services</a>
+      <button class="nav-button" data-open="aboutModal">About</button>
+      <a href="#security">Security</a><button class="nav-button" data-open="contactModal">Contact</button>
+      <a class="nav-login" href="client-login.html">Login</a><a class="nav-open-account" href="client-register.html">Open an Account</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+  <div class="mobile-nav" id="mobileNav" style="display:none;">
+    <a href="#home">Home</a><a href="#services">Services</a><button data-open="aboutModal">About</button><a href="#security">Security</a><button data-open="contactModal">Contact</button><a href="client-login.html">Client Login</a><a href="client-register.html" class="mobile-open-account">Open an Account</a>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero2">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">DIGITAL BANKING • EST. 2013</span>
+      <h1>Banking designed for <span>trust, tradition & future.</span></h1>
+      <p>Experience a premium digital banking platform built around secure account access, multi-currency banking and a simpler way to manage your financial world.</p>
+      <div class="hero-actions"><a class="hero-btn primary" href="client-register.html">Open an Account →</a><a class="hero-btn secondary" href="client-login.html">Client Login</a><button class="hero-btn secondary" data-open="aboutModal">Discover Velorian</button></div>
+    </div>
+    <div class="hero-side client-only-portal">
+      <a class="portal-card2 client" href="client-login.html"><div class="top"><div class="icon">↗</div><span class="arrow">→</span></div><span class="card-kicker">PERSONAL BANKING</span><h2>Client Login</h2><p>Securely access your balance, account details, transactions and multi-currency activity.</p></a>
+      <div class="client-access-note"><span class="note-dot">●</span><span>Secure client access only</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-bar">
+  <div class="stat"><strong>2013</strong><span>Established</span></div><div class="stat"><strong>2.8M+</strong><span>Global Clients</span></div><div class="stat"><strong>70+</strong><span>Markets Reached</span></div><div class="stat"><strong>24/7</strong><span>Digital Access</span></div>
+</div>
+
+<section class="section" id="services">
+  <div class="section-head"><span class="eyebrow">OUR SERVICES</span><h2>Everything you need to move money with confidence.</h2><p>Explore a modern suite of banking experiences for everyday spending, saving, business and global financial activity.</p></div>
+  <div class="service-grid">
+    <article class="service-card glass"><div class="svc-icon">$</div><h3>Personal Banking</h3><p>Manage your everyday account, monitor activity and keep your finances organized from one secure dashboard.</p></article>
+    <article class="service-card glass"><div class="svc-icon">◈</div><h3>Business Banking</h3><p>Built for businesses that need visibility, control and streamlined financial operations.</p></article>
+    <article class="service-card glass"><div class="svc-icon">◎</div><h3>Multi-Currency</h3><p>Maintain USD, GBP and EUR accounts independently and move between currencies with configured FX rates.</p></article>
+    <article class="service-card glass"><div class="svc-icon">↗</div><h3>Transfers</h3><p>Initiate domestic and international transfer requests with OTP verification, clear references and complete transaction records.</p></article>
+    <article class="service-card glass"><div class="svc-icon">▣</div><h3>Statements</h3><p>Review transaction history and generate professional account statements and receipts.</p></article>
+    <article class="service-card glass"><div class="svc-icon">⌁</div><h3>Digital Support</h3><p>Get help when you need it with a digital-first support experience designed around your account.</p></article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="about-wrap">
+    <div class="about-image"><div class="about-badge"><strong>13+ years</strong><span>of the Velorian story</span></div></div>
+    <div class="about-copy"><span class="eyebrow">ABOUT VELORIAN</span><h2>Built on trust. Designed for tomorrow.</h2><p>Velorian Bank was established in 2013 with a simple ambition: to make modern banking feel more personal, transparent and dependable. Today, the Velorian story is represented through a global digital banking experience designed for individuals and businesses.</p><div class="about-list"><div><span class="check">✓</span><span><strong>People first.</strong><br><small>Simple experiences that put customers in control.</small></span></div><div><span class="check">✓</span><span><strong>Digital by design.</strong><br><small>Modern tools for a connected financial world.</small></span></div><div><span class="check">✓</span><span><strong>Built for global activity.</strong><br><small>Multi-currency account experiences across USD, GBP and EUR.</small></span></div></div></div>
+  </div>
+</section>
+
+<section class="section" id="security">
+  <div class="section-head"><span class="eyebrow">SECURITY & TRUST</span><h2>Security is part of the experience.</h2></div>
+  <div class="security-grid"><div class="security-card glass"><strong>Protected Access</strong><span>Dedicated client access with protected account controls.</span></div><div class="security-card glass"><strong>Audit Visibility</strong><span>Transaction and administrative events are designed to remain traceable.</span></div><div class="security-card glass"><strong>Multi-Currency Control</strong><span>Each client account keeps its own operating currency.</span></div><div class="security-card glass"><strong>24/7 Digital Access</strong><span>Manage your banking experience whenever you need it.</span></div></div>
+</section>
+
+<section class="section">
+  <div class="cta"><div><span class="eyebrow">YOUR FINANCIAL JOURNEY</span><h2>Ready to experience Velorian Bank?</h2><p>Access your secure client banking portal or explore the platform first.</p></div><div class="hero-actions"><a class="hero-btn primary" href="client-register.html">Open an Account →</a><a class="hero-btn secondary" href="client-login.html">Client Login →</a></div></div>
+</section>
+
+<section class="section" id="contact">
+  <div class="contact-grid"><div class="contact-card glass"><span class="eyebrow">CONTACT</span><h2>We're here when you need us.</h2><div class="socials"><div class="social"><strong>Instagram</strong><span>@VelorianBank</span></div><div class="social"><strong>Facebook</strong><span>Velorian Bank</span></div><div class="social"><strong>LinkedIn</strong><span>Velorian Bank</span></div><div class="social"><strong>X</strong><span>@VelorianBank</span></div></div></div><div class="contact-card glass"><span class="eyebrow">SUPPORT</span><h2>Digital support</h2><p></p><div class="about-list"><div><span class="check">✦</span><span><strong>Client Banking</strong><br><small>Account access and transaction activity.</small></span></div><div><span class="check">✦</span><span><strong>Account Support</strong><br><small>Help with secure access and account services.</small></span></div></div></div></div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="footer-inner"><div><img src="assets/logo-transparent.png" class="footer-logo" alt="Velorian Bank"></div><div class="footer-copy">Personal Banking · Business Banking · Multi-Currency · Security · Contact</div></div><div class="footer-bottom"><span>© 2026 Velorian Bank. All rights reserved.</span></div></footer>
+
+<div class="modal-backdrop2" id="aboutModal"><div class="site-modal"><button class="close-modal" data-close>×</button><span class="eyebrow">ABOUT VELORIAN BANK</span><h2>Built on trust. Designed for tomorrow.</h2><p>Established in 2013, Velorian Bank has grown into a fictional global banking brand concept focused on premium digital experiences, multi-currency accounts and customer-first financial tools.</p><div class="modal-stat-grid"><div class="modal-stat"><strong>2013</strong><span>Established</span></div><div class="modal-stat"><strong>2.8M+</strong><span>Clients globally</span></div><div class="modal-stat"><strong>70+</strong><span>Markets</span></div></div></div></div>
+<div class="modal-backdrop2" id="contactModal"><div class="site-modal"><button class="close-modal" data-close>×</button><span class="eyebrow">CONNECT WITH VELORIAN</span><h2>Contact & social channels</h2><p>Stay connected with Velorian Bank through our social channels.</p><div class="socials"><div class="social"><strong>Instagram</strong><span>@VelorianBank</span></div><div class="social"><strong>Facebook</strong><span>Velorian Bank</span></div><div class="social"><strong>LinkedIn</strong><span>Velorian Bank</span></div><div class="social"><strong>X</strong><span>@VelorianBank</span></div></div></div></div>
+<script>
+  const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav');
+  menuBtn?.addEventListener('click',()=>mobileNav.classList.toggle('open'));
+  document.querySelectorAll('[data-open]').forEach(btn=>btn.addEventListener('click',()=>{document.getElementById(btn.dataset.open)?.classList.add('open');mobileNav?.classList.remove('open')}));
+  document.querySelectorAll('[data-close]').forEach(btn=>btn.addEventListener('click',()=>btn.closest('.modal-backdrop2')?.classList.remove('open')));
+  document.querySelectorAll('.modal-backdrop2').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open')}));
+  document.querySelectorAll('.mobile-nav a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
+</script>
+
+  <script src="js/preloader.js"></script>
+</body>
+</html>

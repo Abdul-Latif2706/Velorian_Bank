@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrator Login — Velorian Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="stylesheet" href="../css/preloader.css">
+</head>
+<body class="auth-body" style="background:linear-gradient(90deg,rgba(3,11,19,.84),rgba(3,12,21,.58)),url('../assets/backgrounds/admin-login-bg.jpg') center/cover fixed no-repeat;">
+  <div id="vb-preloader" aria-label="Loading Velorian Bank" role="status">
+    <div class="vb-loader-shell">
+      <div class="vb-loader-mark">
+        <span class="vb-loader-ring"></span>
+        <img class="vb-loader-logo" src="../assets/logo-transparent.png" alt="Velorian Bank">
+      </div>
+      <p class="vb-loader-name">Velorian Bank</p>
+      <p class="vb-loader-status">Securing your banking experience</p>
+      <div class="vb-loader-progress" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="auth-orb orb-left"></div>
+  <div class="auth-orb orb-right"></div>
+
+  <main class="auth-layout">
+    <section class="auth-visual">
+      <a href="../index.html" class="back-link">← Back to portal selection</a>
+      <img src="../assets/logo.jfif" alt="Velorian Bank" class="auth-logo">
+      <span class="eyebrow">VELORIAN BANK / ADMIN</span>
+      <h1>Command the<br><span>entire system.</span></h1>
+      <p>Review client activity, manage accounts and monitor the bank's transaction flow from one control center.</p>
+    </section>
+
+    <section class="auth-card glass">
+      <div class="auth-card-head">
+        <div class="mini-brand">V</div>
+        <div>
+          <span class="card-kicker">SECURE ACCESS</span>
+          <h2>Administrator sign in</h2>
+        </div>
+      </div>
+
+      <form id="adminLoginForm" class="form-stack">
+        <label>Email address
+          <input id="adminEmail" type="email" autocomplete="username" placeholder="Enter administrator email" required>
+        </label>
+        <label>Password
+          <div class="password-wrap">
+            <input id="adminPassword" type="password" autocomplete="current-password" placeholder="Enter password" required>
+            <button type="button" class="password-toggle" data-target="adminPassword">Show</button>
+          </div>
+        </label>
+        <button class="primary-btn" type="submit">Enter Admin Dashboard <span>→</span></button>
+        <p id="adminLoginError" class="form-error"></p>
+      </form>
+</section>
+  </main>
+  <script src="../js/storage.js"></script><script src="../js/config.js"></script><script src="../js/online-api.js"></script>
+  <script src="../js/auth.js"></script>
+
+  <script src="../js/preloader.js"></script>
+<script src="../js/password-toggle.js"></script>
+</body>
+</html>

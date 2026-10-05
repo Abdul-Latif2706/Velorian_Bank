@@ -1,0 +1,125 @@
+
+/* =========================================================
+   VELORIAN BANK — PREMIUM GLOBAL PRELOADER
+   ========================================================= */
+#vb-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(212,169,72,.10), transparent 28%),
+    linear-gradient(145deg, #030b14 0%, #071522 52%, #02070d 100%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .55s ease, visibility .55s ease;
+}
+
+#vb-preloader.vb-preloader-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.vb-loader-shell {
+  width: min(340px, 84vw);
+  text-align: center;
+  color: #f7f9fc;
+}
+
+.vb-loader-mark {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  margin: 0 auto 26px;
+  display: grid;
+  place-items: center;
+}
+
+.vb-loader-ring,
+.vb-loader-ring::before {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  content: "";
+}
+
+.vb-loader-ring {
+  border: 1px solid rgba(226,190,96,.22);
+  border-top-color: #e4bd5d;
+  border-right-color: rgba(228,189,93,.55);
+  animation: vb-spin 1.25s linear infinite;
+}
+
+.vb-loader-ring::before {
+  inset: 9px;
+  border: 1px solid rgba(92,157,255,.16);
+  border-bottom-color: rgba(92,157,255,.85);
+  animation: vb-spin-reverse 1.7s linear infinite;
+}
+
+.vb-loader-logo {
+  position: relative;
+  z-index: 2;
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(224,186,83,.20));
+  animation: vb-breathe 1.8s ease-in-out infinite;
+}
+
+.vb-loader-name {
+  margin: 0;
+  font-family: Inter, "Plus Jakarta Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+}
+
+.vb-loader-status {
+  margin: 9px 0 0;
+  color: rgba(220,229,240,.68);
+  font-family: Inter, "Plus Jakarta Sans", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.vb-loader-progress {
+  width: 170px;
+  height: 2px;
+  margin: 18px auto 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+}
+
+.vb-loader-progress::after {
+  display: block;
+  width: 45%;
+  height: 100%;
+  content: "";
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, #e5bd60, #fff0a9, transparent);
+  animation: vb-progress 1.15s ease-in-out infinite;
+}
+
+@keyframes vb-spin { to { transform: rotate(360deg); } }
+@keyframes vb-spin-reverse { to { transform: rotate(-360deg); } }
+@keyframes vb-breathe {
+  0%,100% { transform: scale(.96); opacity: .82; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+@keyframes vb-progress {
+  from { transform: translateX(-160%); }
+  to { transform: translateX(390%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #vb-preloader, .vb-loader-ring, .vb-loader-ring::before,
+  .vb-loader-logo, .vb-loader-progress::after {
+    animation: none !important;
+  }
+}

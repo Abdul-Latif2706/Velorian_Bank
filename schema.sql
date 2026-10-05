@@ -1,0 +1,38 @@
+CREATE TABLE IF NOT EXISTS clients (
+  id VARCHAR(64) PRIMARY KEY,
+  name VARCHAR(160) NOT NULL,
+  email VARCHAR(190) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  phone VARCHAR(40) DEFAULT '', country VARCHAR(100) DEFAULT '', dob VARCHAR(30) DEFAULT '', address VARCHAR(255) DEFAULT '',
+  account_type VARCHAR(60) NOT NULL DEFAULT 'Savings Account', currency CHAR(3) NOT NULL DEFAULT 'USD',
+  account_number CHAR(10) NOT NULL UNIQUE, balance DECIMAL(18,2) NOT NULL DEFAULT 0, status VARCHAR(20) NOT NULL DEFAULT 'Active',
+  force_password_change TINYINT(1) NOT NULL DEFAULT 0, created_at DATETIME NOT NULL, updated_at DATETIME NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS transactions (
+  id VARCHAR(80) PRIMARY KEY, client_id VARCHAR(64) NOT NULL, client_account_number CHAR(10) NOT NULL, client_name VARCHAR(160) NOT NULL,
+  type VARCHAR(40) NOT NULL, amount DECIMAL(18,2) NOT NULL, currency CHAR(3) NOT NULL, status VARCHAR(30) NOT NULL,
+  description VARCHAR(255) DEFAULT '', timestamp DATETIME NOT NULL, reference VARCHAR(100) DEFAULT NULL,
+  received_amount DECIMAL(18,2) DEFAULT NULL, received_currency CHAR(3) DEFAULT NULL, exchange_rate DECIMAL(18,8) DEFAULT NULL,
+  related_client_id VARCHAR(64) DEFAULT NULL, related_account_number CHAR(10) DEFAULT NULL, direction VARCHAR(10) DEFAULT NULL,
+  recipient_name VARCHAR(160) DEFAULT NULL, bank_name VARCHAR(160) DEFAULT NULL, destination_country VARCHAR(100) DEFAULT NULL,
+  recipient_account VARCHAR(100) DEFAULT NULL, iban VARCHAR(100) DEFAULT NULL, swift VARCHAR(30) DEFAULT NULL, status_label VARCHAR(100) DEFAULT NULL,
+  INDEX(client_id), INDEX(timestamp)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS transfers (
+  id VARCHAR(100) PRIMARY KEY, client_id VARCHAR(64) NOT NULL, client_account_number CHAR(10) NOT NULL, client_name VARCHAR(160) NOT NULL,
+  amount DECIMAL(18,2) NOT NULL, currency CHAR(3) NOT NULL, recipient_name VARCHAR(160) NOT NULL, bank_name VARCHAR(160) NOT NULL,
+  destination_country VARCHAR(100) NOT NULL, recipient_account VARCHAR(100) NOT NULL, iban VARCHAR(100) DEFAULT '', swift VARCHAR(30) DEFAULT '', description VARCHAR(255) DEFAULT '',
+  status VARCHAR(30) NOT NULL, created_at DATETIME NOT NULL, verified_at DATETIME NULL, INDEX(client_id), INDEX(created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS otp_challenges (
+  reference VARCHAR(100) PRIMARY KEY, client_id VARCHAR(64) NOT NULL, otp_hash VARCHAR(255) NOT NULL, expires_at DATETIME NOT NULL, attempts INT NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS sessions (
+  token CHAR(64) PRIMARY KEY, role VARCHAR(20) NOT NULL, client_id VARCHAR(64) NULL, created_at DATETIME NOT NULL, expires_at DATETIME NOT NULL, INDEX(client_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS audit_logs (
+  id VARCHAR(64) PRIMARY KEY, action VARCHAR(160) NOT NULL, details VARCHAR(500) DEFAULT '', actor VARCHAR(160) NOT NULL, timestamp DATETIME NOT NULL, INDEX(timestamp)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS settings (
+  setting_key VARCHAR(80) PRIMARY KEY, setting_value TEXT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
